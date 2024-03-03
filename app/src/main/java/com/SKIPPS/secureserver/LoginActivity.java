@@ -1,8 +1,10 @@
-package com.example.secureserver;
+package com.SKIPPS.secureserver;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.example.secureserver.R;
 
 public class LoginActivity extends AppCompatActivity {
 

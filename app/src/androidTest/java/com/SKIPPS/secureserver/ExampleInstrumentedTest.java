@@ -1,4 +1,4 @@
-package com.example.secureserver;
+package com.SKIPPS.secureserver;
 
 import android.content.Context;
 

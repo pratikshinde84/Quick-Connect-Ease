@@ -4,9 +4,10 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".SplashActivity"
+    tools:context="com.SKIPPS.secureserver.SplashActivity"
     android:orientation="vertical"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="#fff">
 
     <TextView
         android:id="@+id/tv_main_title"
@@ -15,7 +16,7 @@
         android:fontFamily="sans-serif-condensed-medium"
         android:text="Secure Server"
         android:layout_marginTop="-10dp"
-        android:textColor="@color/sky"
+        android:textColor="@color/black"
         android:textSize="50sp"
         android:textStyle="bold" />
 
@@ -27,7 +28,7 @@
         android:layout_marginRight="20sp"
         android:fontFamily="sans-serif-condensed"
         android:text="Security"
-        android:textColor="@color/sky"
+        android:textColor="@color/black"
         android:textSize="30dp"
         android:textStyle="italic" />
 
