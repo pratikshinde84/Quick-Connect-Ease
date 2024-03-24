@@ -1,4 +1,4 @@
-package com.SKIPPS.secureserver;
+package com.SKIPPS.quick_connect_ease;
 
 import androidx.appcompat.app.AppCompatActivity;
 

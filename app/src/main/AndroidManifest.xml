@@ -13,10 +13,10 @@
         android:theme="@style/Theme.SecureServer"
         tools:targetApi="31">
         <activity
-            android:name="com.SKIPPS.secureserver.LoginActivity"
+            android:name="com.SKIPPS.quick_connect_ease.LoginActivity"
             android:exported="false" />
         <activity
-            android:name="com.SKIPPS.secureserver.SplashActivity"
+            android:name="com.SKIPPS.quick_connect_ease.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
