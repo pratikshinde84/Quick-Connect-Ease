@@ -13,6 +13,11 @@
         android:theme="@style/Theme.SecureServer"
         tools:targetApi="31">
         <activity
+            android:name="com.SKIPPS.quick_connect_ease.MainActivity"
+            android:exported="false"
+            android:label="@string/title_activity_main"
+            android:theme="@style/Theme.SecureServer.NoActionBar" />
+        <activity
             android:name="com.SKIPPS.quick_connect_ease.LoginActivity"
             android:exported="false" />
         <activity
