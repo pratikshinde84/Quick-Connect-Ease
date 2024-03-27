@@ -2,8 +2,21 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_contact_us"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="Contact us"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_about_us"
+        android:orderInCategory="100"
+        android:title="About us"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_manual"
+        android:orderInCategory="100"
+        android:title="Manual"
+        app:showAsAction="never" />
+
 </menu>

@@ -69,6 +69,7 @@
             android:textColorHint="@color/black"
             app:passwordToggleEnabled="true"
             app:hintTextColor="@color/black"
+            app:passwordToggleTintMode="multiply"
             app:passwordToggleTint="@color/black"
             >
 
@@ -95,7 +96,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/btn_login"
             android:text="Login"
-            android:background="@color/yellow"
+            android:backgroundTint="@color/black"
             android:layout_gravity="right"
             android:elevation="0dp"
             android:textColor="@color/white"

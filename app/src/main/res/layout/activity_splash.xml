@@ -14,23 +14,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/madimi"
-        android:text="Secure Server"
+        android:text="Quick Connect Ease"
         android:layout_marginTop="20dp"
         android:textColor="@color/black"
-        android:textSize="50sp"
+        android:textSize="45sp"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/tv_main_subtitle"
-        android:layout_width="200dp"
+        android:layout_width="312dp"
         android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:layout_marginRight="20sp"
+        android:layout_marginRight="-20sp"
         android:fontFamily="@font/madimi"
-        android:text="Security"
+        android:text="Home server management"
         android:textColor="@color/black"
-        android:textSize="30dp"
-        android:textStyle="italic" />
+        android:textSize="25dp"
+        android:textStyle="bold" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animationView"

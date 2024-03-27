@@ -3,9 +3,9 @@
 
     <style name="Base.Theme.SecureServer" parent="Theme.Material3.DayNight.NoActionBar">
         <item name="colorPrimary">@color/gray</item>
-        <item name="colorPrimaryDark">@color/green</item>
+        <item name="colorPrimaryDark">@color/sky</item>
         <item name="colorAccent">@color/green</item>
-        <item name="android:statusBarColor">#00000000</item>
+        <item name="android:statusBarColor">#000000</item>
     </style>
 
     <style name="NoActionBar" parent="Theme.AppCompat.DayNight.NoActionBar" />
