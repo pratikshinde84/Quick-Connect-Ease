@@ -16,21 +16,30 @@
     <color name="dark_one">#dcdcdc</color>
     <color name="dark_two">#dcdcdc</color>
     <color name="dark_three">#dcdcdc</color>
+    <color name="dark_four">#dcdcdc</color>
+    <color name="dark_five">#dcdcdc</color>
+
 
     <color name="orange_one">#e65252</color>
     <color name="orange_two">#e65252</color>
     <color name="orange_three">#e65252</color>
+    <color name="orange_four">#e65252</color>
+    <color name="orange_five">#e65252</color>
 
     <array name="active">
         <item>@color/orange_one</item>
         <item>@color/orange_two</item>
         <item>@color/orange_three</item>
+        <item>@color/orange_four</item>
+        <item>@color/orange_five</item>
     </array>
 
     <array name="inactive">
         <item>@color/dark_one</item>
         <item>@color/dark_two</item>
         <item>@color/dark_three</item>
+        <item>@color/dark_four</item>
+        <item>@color/dark_five</item>
     </array>
 
 

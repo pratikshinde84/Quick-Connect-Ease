@@ -33,7 +33,7 @@ public class ManualActivity extends AppCompatActivity {
         layoutDots = findViewById(R.id.layout_Dots);
 
         layouts = new int[]{
-                R.layout.intro_one, R.layout.intro_two, R.layout.intro_three
+                R.layout.intro_one, R.layout.intro_two, R.layout.intro_three, R.layout.intro_four, R.layout.intro_five
         };
 
         tv_next.setOnClickListener(new View.OnClickListener() {

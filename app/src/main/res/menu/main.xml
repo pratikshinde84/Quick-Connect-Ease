@@ -5,7 +5,13 @@
         android:id="@+id/menu_manual"
         android:orderInCategory="100"
         android:icon="@drawable/manual"
-        android:title="Manual"
+        android:title="Help"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_about_us"
+        android:orderInCategory="100"
+        android:icon="@drawable/about_us"
+        android:title="About Us"
         app:showAsAction="never" />
     <item
         android:id="@+id/menu_contact_us"
@@ -14,10 +20,11 @@
         android:title="Contact Us"
         app:showAsAction="never" />
     <item
-        android:id="@+id/menu_about_us"
+        android:id="@+id/menu_logout"
         android:orderInCategory="100"
-        android:icon="@drawable/about_us"
-        android:title="About Us"
-        app:showAsAction="never" />
+        android:icon="@drawable/logout"
+        android:title="Logout"
+        app:showAsAction="always"
+        />
 
 </menu>
