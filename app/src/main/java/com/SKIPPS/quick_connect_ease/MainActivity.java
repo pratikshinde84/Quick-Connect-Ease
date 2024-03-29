@@ -5,20 +5,19 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.Menu;
 
-import com.example.secureserver.R;
-import com.google.android.material.navigation.NavigationView;
-
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
-import androidx.drawerlayout.widget.DrawerLayout;
-import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.secureserver.R;
 import com.example.secureserver.databinding.ActivityMainBinding;
+import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
@@ -34,8 +33,9 @@ public class MainActivity extends AppCompatActivity {
 
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
+        navigationView.setNavigationItemSelectedListener(this);
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
+                R.id.fragment_ssh, R.id.fragment_power_mgmt, R.id.nav_slideshow)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.action_manual) {
-            // Launch ManualActivity when "Manual" option in the menu is clicked
             Intent intent = new Intent(this, ManualActivity.class);
             startActivity(intent);
             return true;
@@ -66,5 +65,26 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    @Override
+    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        // Handle navigation view item clicks here
+        int id = item.getItemId();
+        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
+        if (id == R.id.nav_ssh_fragment) {
+            navController.navigate(R.id.nav_ssh_fragment);
+        } else if (id == R.id.nav_power_management_fragment) {
+            navController.navigate(R.id.nav_power_management_fragment);
+        } else if (id == R.id.nav_upload_file_fragment) {
+            navController.navigate(R.id.nav_upload_file_fragment);
+        } else if (id == R.id.nav_download_file_fragment) {
+            navController.navigate(R.id.nav_download_file_fragment);
+        } else if (id == R.id.nav_http_management_fragment) {
+            navController.navigate(R.id.nav_http_management_fragment);
+        }
+        DrawerLayout drawer = binding.drawerLayout;
+        drawer.close();
+        return true;
     }
 }

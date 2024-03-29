@@ -23,7 +23,6 @@ public class ManualActivity extends AppCompatActivity {
     int[] layouts;
     TextView[] dots;
     MyViewPagerAdapter viewPagerAdapter;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

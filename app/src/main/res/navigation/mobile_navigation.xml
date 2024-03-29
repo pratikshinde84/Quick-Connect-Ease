@@ -3,23 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
+    app:startDestination="@+id/fragment_ssh">
 
     <fragment
-        android:id="@+id/nav_home"
-        android:name="com.SKIPPS.quick_connect_ease.ui.home.HomeFragment"
+        android:id="@+id/nav_power_mgmt"
+        android:name="com.SKIPPS.quick_connect_ease.fragment_power_mgmt"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_power_mgmt" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.SKIPPS.quick_connect_ease.ui.gallery.GalleryFragment"
+        android:id="@+id/nav_ssh"
+        android:name="com.SKIPPS.quick_connect_ease.fragment_ssh"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_ssh" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.SKIPPS.quick_connect_ease.ui.slideshow.SlideshowFragment"
+        android:id="@+id/nav_upload_file"
+        android:name="com.SKIPPS.quick_connect_ease.fragment_upload_file"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
+        tools:layout="@layout/fragment_upload_file" />
+
+    <fragment
+        android:id="@+id/nav_download_file"
+        android:name="com.SKIPPS.quick_connect_ease.fragment_download_file"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_download_file" />
+
+    <fragment
+        android:id="@+id/nav_http"
+        android:name="com.SKIPPS.quick_connect_ease.fragment_http"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_upload_file" />
 </navigation>
