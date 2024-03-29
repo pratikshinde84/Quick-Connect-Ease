@@ -42,8 +42,9 @@ public class ManualActivity extends AppCompatActivity {
                 int current = getItem(+1);
                 if (current < layouts.length) {
                     viewPager.setCurrentItem(current);
-                } else {
-                    Intent i=new Intent(ManualActivity.this,MainActivity.class);
+                }
+                else {
+                    Intent i=new Intent(ManualActivity.this, MainActivity.class);
                     startActivity(i);
                     finish();
                 }

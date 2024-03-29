@@ -3,21 +3,23 @@ package com.SKIPPS.quick_connect_ease;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 import android.view.Menu;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.drawerlayout.widget.DrawerLayout;
+import com.example.secureserver.R;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.navigation.NavigationView;
+
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.secureserver.R;
 import com.example.secureserver.databinding.ActivityMainBinding;
-import com.google.android.material.navigation.NavigationView;
 
-public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
@@ -33,9 +35,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
-        navigationView.setNavigationItemSelectedListener(this);
+
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.fragment_ssh, R.id.fragment_power_mgmt, R.id.nav_slideshow)
+                R.id.nav_power_mgmt,R.id.nav_upload_file, R.id.nav_ssh, R.id.nav_download_file,R.id.nav_http)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
@@ -45,18 +47,30 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+    public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
-        if (id == R.id.action_manual) {
-            Intent intent = new Intent(this, ManualActivity.class);
+
+        if (id == R.id.menu_manual) {
+            Intent intent = new Intent(MainActivity.this, ManualActivity.class);
+            startActivity(intent);
+            return true;
+        } else if (id == R.id.menu_about_us) {
+            Intent intent = new Intent(MainActivity.this, About_us_Activtiy.class);
+            startActivity(intent);
+            return true;
+        } else if (id == R.id.menu_contact_us) {
+            Intent intent = new Intent(MainActivity.this, Contact_us_Activity.class);
             startActivity(intent);
             return true;
         }
+
+
         return super.onOptionsItemSelected(item);
     }
 
@@ -65,26 +79,5 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
-    }
-
-    @Override
-    public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        // Handle navigation view item clicks here
-        int id = item.getItemId();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
-        if (id == R.id.nav_ssh_fragment) {
-            navController.navigate(R.id.nav_ssh_fragment);
-        } else if (id == R.id.nav_power_management_fragment) {
-            navController.navigate(R.id.nav_power_management_fragment);
-        } else if (id == R.id.nav_upload_file_fragment) {
-            navController.navigate(R.id.nav_upload_file_fragment);
-        } else if (id == R.id.nav_download_file_fragment) {
-            navController.navigate(R.id.nav_download_file_fragment);
-        } else if (id == R.id.nav_http_management_fragment) {
-            navController.navigate(R.id.nav_http_management_fragment);
-        }
-        DrawerLayout drawer = binding.drawerLayout;
-        drawer.close();
-        return true;
     }
 }

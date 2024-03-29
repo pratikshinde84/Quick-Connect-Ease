@@ -2,21 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_contact_us"
+        android:id="@+id/menu_manual"
         android:orderInCategory="100"
-        android:title="Contact us"
-        app:showAsAction="never" />
-
-    <item
-        android:id="@+id/action_about_us"
-        android:orderInCategory="100"
-        android:title="About us"
-        app:showAsAction="never" />
-
-    <item
-        android:id="@+id/action_manual"
-        android:orderInCategory="100"
+        android:icon="@drawable/manual"
         android:title="Manual"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_contact_us"
+        android:orderInCategory="100"
+        android:icon="@drawable/contact_us"
+        android:title="Contact Us"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/menu_about_us"
+        android:orderInCategory="100"
+        android:icon="@drawable/about_us"
+        android:title="About Us"
         app:showAsAction="never" />
 
 </menu>

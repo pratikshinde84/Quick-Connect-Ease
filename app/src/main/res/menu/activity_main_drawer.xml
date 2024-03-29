@@ -5,25 +5,26 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_ssh_fragment"
-            android:icon="@drawable/ic_menu_camera"
+            android:id="@+id/nav_power_mgmt"
+            android:icon="@drawable/power"
+            android:title="Power Management" />
+        <item
+            android:id="@+id/nav_ssh"
+            android:icon="@drawable/ssh"
             android:title="SSH" />
         <item
-            android:id="@+id/nav_power_management_fragment"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Power management" />
+            android:id="@+id/nav_upload_file"
+            android:icon="@drawable/baseline_file_upload_24"
+            android:title="Upload File" />
         <item
-            android:id="@+id/nav_upload_file_fragment"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Upload file" />
+            android:id="@+id/nav_download_file"
+            android:icon="@drawable/baseline_file_download_24"
+            android:title="Download File" />
         <item
-            android:id="@+id/nav_download_file_fragment"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Download file" />
-        <item
-            android:id="@+id/nav_http_management_fragment"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="HTTP management" />
+            android:id="@+id/nav_http"
+            android:icon="@drawable/baseline_https_24"
+            android:title="HTTP" />
+
 
     </group>
 </menu>

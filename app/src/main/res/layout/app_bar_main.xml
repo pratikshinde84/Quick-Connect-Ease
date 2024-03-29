@@ -22,13 +22,30 @@
 
     <include layout="@layout/content_main" />
 
-<!--    <com.google.android.material.floatingactionbutton.FloatingActionButton-->
-<!--        android:id="@+id/fab"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="bottom|end"-->
-<!--        android:layout_marginEnd="@dimen/fab_margin"-->
-<!--        android:layout_marginBottom="16dp"-->
-<!--        app:srcCompat="@android:drawable/ic_dialog_email" />-->
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/btn_power_off"
+        android:text="Power Off"
+        android:backgroundTint="@color/black"
+        android:layout_gravity="right"
+        android:elevation="0dp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="120dp"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/btn_power_on"
+        android:text="Power On"
+        android:backgroundTint="@color/black"
+        android:layout_gravity="right"
+        android:elevation="0dp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="200dp"
+        />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
