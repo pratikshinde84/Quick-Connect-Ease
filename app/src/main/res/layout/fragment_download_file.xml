@@ -7,7 +7,7 @@
     tools:context=".ui.Download_File.Download_File_Fragment">
 
     <TextView
-        android:id="@+id/text_slideshow"
+        android:id="@+id/text_download"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"

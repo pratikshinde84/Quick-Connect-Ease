@@ -7,15 +7,21 @@
         <item
             android:id="@+id/nav_power_mgmt"
             android:icon="@drawable/power"
-            android:title="Power Management" />
+            android:title="Power Management"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"/>
         <item
             android:id="@+id/nav_ssh"
             android:icon="@drawable/ssh"
-            android:title="SSH" />
+            android:title="SSH"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"/>
         <item
             android:id="@+id/nav_upload_file"
             android:icon="@drawable/baseline_file_upload_24"
-            android:title="Upload File" />
+            android:title="Upload File"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"/>
         <item
             android:id="@+id/nav_download_file"
             android:icon="@drawable/baseline_file_download_24"
