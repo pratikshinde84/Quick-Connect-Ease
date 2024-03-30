@@ -25,6 +25,5 @@
             android:icon="@drawable/baseline_https_24"
             android:title="HTTP" />
 
-
     </group>
 </menu>

@@ -8,14 +8,29 @@
     tools:context=".ui.Power_Management.Power_Mgmt_Fragment">
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Power off"
-        android:id="@+id/btn_power_off"/>
+        android:id="@+id/btn_power_off"
+        android:text="Power Off"
+        android:backgroundTint="@color/black"
+        android:layout_gravity="right"
+        android:elevation="0dp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        />
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Power on"
-        android:id="@+id/btn_power_on"/>
+        android:id="@+id/btn_power_on"
+        android:text="Power On"
+        android:backgroundTint="@color/black"
+        android:layout_gravity="right"
+        android:elevation="0dp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp"
+        />
+
 
 </LinearLayout>

@@ -25,13 +25,13 @@
 
     <fragment
         android:id="@+id/nav_http"
-        android:name="com.example.secureserver.ui.Download_File.Download_File_Fragment"
+        android:name="com.example.secureserver.ui.HTTP.HTTP_Fragment"
         android:label="HTTP"
         tools:layout="@layout/fragment_http" />
 
     <fragment
         android:id="@+id/nav_power_mgmt"
-        android:name="com.example.secureserver.ui.Download_File.Download_File_Fragment"
+        android:name="com.example.secureserver.ui.Power_Management.Power_Mgmt_Fragment"
         android:label="Power Management"
         tools:layout="@layout/fragment_power_mgmt" />
 </navigation>

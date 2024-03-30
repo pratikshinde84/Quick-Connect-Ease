@@ -17,7 +17,6 @@ import com.example.secureserver.R;
 
 public class Power_Mgmt_Fragment extends Fragment {
 
-    // Declare buttons
     private Button btn_power_off;
     private Button btn_power_on;
 

@@ -7,9 +7,15 @@ import android.view.View;
 import android.view.Menu;
 
 import com.example.secureserver.R;
+import com.example.secureserver.ui.Download_File.Download_File_Fragment;
+import com.example.secureserver.ui.HTTP.HTTP_Fragment;
+import com.example.secureserver.ui.Power_Management.Power_Mgmt_Fragment;
+import com.example.secureserver.ui.SSH.SSHFragment;
+import com.example.secureserver.ui.Upload_File.Upload_File_Fragment;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.core.view.GravityCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -43,11 +49,28 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
+
+        navigationView.setNavigationItemSelectedListener(item -> {
+            int id = item.getItemId();
+            if (id == R.id.nav_power_mgmt) {
+                navController.navigate(R.id.nav_power_mgmt);
+            } else if (id == R.id.nav_http) {
+                navController.navigate(R.id.nav_http);
+            } else if (id == R.id.nav_ssh) {
+                navController.navigate(R.id.nav_ssh);
+            } else if (id == R.id.nav_upload_file) {
+                navController.navigate(R.id.nav_upload_file);
+            } else if (id == R.id.nav_download_file) {
+                navController.navigate(R.id.nav_download_file);
+            }
+            drawer.closeDrawer(GravityCompat.START);
+            return true;
+        });
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
@@ -69,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
             startActivity(intent);
             return true;
         }
-
 
         return super.onOptionsItemSelected(item);
     }

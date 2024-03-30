@@ -14,7 +14,6 @@ import com.example.secureserver.R;
 import com.example.secureserver.databinding.FragmentUploadFileBinding;
 
 public class Upload_File_Fragment extends Fragment {
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
