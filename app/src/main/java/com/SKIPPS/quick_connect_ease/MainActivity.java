@@ -1,20 +1,17 @@
 package com.SKIPPS.quick_connect_ease;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.MenuItem;
-import android.view.View;
 import android.view.Menu;
+import android.widget.Toast;
 
 import com.example.secureserver.R;
-import com.example.secureserver.ui.Download_File.Download_File_Fragment;
-import com.example.secureserver.ui.HTTP.HTTP_Fragment;
-import com.example.secureserver.ui.Power_Management.Power_Mgmt_Fragment;
-import com.example.secureserver.ui.SSH.SSHFragment;
-import com.example.secureserver.ui.Upload_File.Upload_File_Fragment;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.view.GravityCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -27,6 +24,7 @@ import com.example.secureserver.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
+    boolean doubleTap = false;
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
 
@@ -43,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         NavigationView navigationView = binding.navView;
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_power_mgmt,R.id.nav_upload_file, R.id.nav_ssh, R.id.nav_download_file,R.id.nav_http)
+                R.id.nav_power_mgmt, R.id.nav_upload_file, R.id.nav_ssh, R.id.nav_download_file, R.id.nav_http)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
@@ -91,13 +89,11 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this, Contact_us_Activity.class);
             startActivity(intent);
             return true;
-        }
-        else if (id == R.id.menu_settings) {
+        } else if (id == R.id.menu_settings) {
             Intent intent = new Intent(MainActivity.this, ConfigActivity.class);
             startActivity(intent);
             return true;
-        }
-        else if (id == R.id.menu_logout) {
+        } else if (id == R.id.menu_logout) {
             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
             startActivity(intent);
             finish();
@@ -112,5 +108,34 @@ public class MainActivity extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (doubleTap)
+        {
+            new AlertDialog.Builder(this)
+                    .setTitle("Exit")
+                    .setMessage("Are you sure you want to exit?")
+                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog, int which) {
+                            MainActivity.super.onBackPressed();
+                        }
+                    })
+                    .setNegativeButton(android.R.string.no, null)
+                    .setIcon(android.R.drawable.ic_dialog_alert)
+                    .show();
+        }
+        else
+        {
+            Toast.makeText(MainActivity.this, "Press again to exit app", Toast.LENGTH_SHORT).show();
+            doubleTap = true;
+            new Handler().postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    doubleTap = false;
+                }
+            }, 2000);
+        }
     }
 }

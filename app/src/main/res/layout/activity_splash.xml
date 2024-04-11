@@ -17,7 +17,7 @@
         android:text="Quick Connect Ease"
         android:layout_marginTop="20dp"
         android:textColor="@color/black"
-        android:textSize="45sp"
+        android:textSize="40sp"
         android:textStyle="bold" />
 
     <TextView
@@ -35,7 +35,7 @@
         android:id="@+id/animationView"
         android:layout_width="300dp"
         android:layout_height="300dp"
-        app:lottie_rawRes="@raw/animation"
+        app:lottie_rawRes="@raw/animation2"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"/>
 
