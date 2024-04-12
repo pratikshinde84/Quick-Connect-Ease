@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.SKIPPS.quick_connect_ease.About_us_Activtiy">
+    tools:context="com.SKIPPS.quick_connect_ease.About_us_Activtiy"
+    android:background="@drawable/background">
 
 </androidx.constraintlayout.widget.ConstraintLayout>

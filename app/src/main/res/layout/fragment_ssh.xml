@@ -9,19 +9,18 @@
 
     <EditText
         android:id="@+id/edittext_terminal_output"
-        android:layout_width="match_parent"
-        android:layout_height="670dp"
+        android:layout_width="416dp"
+        android:layout_height="730dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
         android:background="#000000"
-        android:textColor="#FFFFFF"
-        android:textSize="14sp"
         android:gravity="start|top"
         android:inputType="textMultiLine"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.513"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 

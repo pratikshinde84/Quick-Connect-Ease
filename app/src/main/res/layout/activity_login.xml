@@ -6,8 +6,9 @@
     android:layout_height="match_parent"
     tools:context="com.SKIPPS.quick_connect_ease.LoginActivity"
     android:orientation="vertical"
-    android:background="@color/gray"
     android:padding="20dp"
+    android:id="@+id/main_layout"
+    android:background="@drawable/background"
     >
 
     <com.airbnb.lottie.LottieAnimationView
@@ -89,7 +90,18 @@
 
         </androidx.cardview.widget.CardView>
 
-
+        <Button
+            android:id="@+id/btn_fingerprint"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:text="Use Fingerprint"
+            android:backgroundTint="@color/black"
+            android:textColor="@color/white"
+            android:layout_gravity="end"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="10dp"
+            />
 
     </LinearLayout>
 
