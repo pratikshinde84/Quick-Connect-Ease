@@ -5,20 +5,55 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.Download_File.Download_File_Fragment"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/text_download"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
+        android:fontFamily="@font/poppins"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:text="Server To Local Device" />
+
+    <TextView
+        android:id="@+id/text_path_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
         android:textAlignment="center"
         android:textSize="20sp"
-        android:text="Hello"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="/home/piyush/" />
+
+        <ListView
+            android:id="@+id/download_listview"
+            android:layout_width="300dp"
+            android:layout_gravity="center"
+            android:layout_height="300dp"
+            android:layout_marginTop="30dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
+        android:fontFamily="@font/madimi"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:text="Recently Downloaded"
+        android:textStyle="bold"/>
+
+    <ListView
+        android:id="@+id/downloaded_file_listview"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"/>
+
 </LinearLayout>

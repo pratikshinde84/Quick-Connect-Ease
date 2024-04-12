@@ -6,8 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
-    tools:context="com.SKIPPS.quick_connect_ease.NotepadActivity">
-
+    tools:context="com.SKIPPS.quick_connect_ease.NotepadActivity"
+    android:background="@color/gray">
 
     <EditText
         android:id="@+id/et_notepad"
@@ -16,18 +16,26 @@
         android:hint="Start typing..."
         android:gravity="top|start"
         android:padding="8dp"
-        app:layout_constraintBottom_toTopOf="@id/btn_save"
+        android:textSize="16dp"
+        android:fontFamily="@font/roboto"
+        android:background="@color/white"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@id/btn_upload_notepad"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_save"
+        android:id="@+id/btn_upload_notepad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Save"
+        android:text="Upload"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_margin="16dp" />
+        android:layout_margin="16dp"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/black"
+        />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

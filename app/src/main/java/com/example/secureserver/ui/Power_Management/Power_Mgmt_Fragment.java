@@ -6,12 +6,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
+
 import com.example.secureserver.R;
 
 public class Power_Mgmt_Fragment extends Fragment {
 
     private Button btn_power_off;
     private Button btn_power_on;
+    TextView tv_con;
 
     public static Power_Mgmt_Fragment newInstance() {
         return new Power_Mgmt_Fragment();
@@ -25,6 +28,7 @@ public class Power_Mgmt_Fragment extends Fragment {
 
         btn_power_off = root.findViewById(R.id.btn_power_off);
         btn_power_on = root.findViewById(R.id.btn_power_on);
+        tv_con=root.findViewById(R.id.tv_con);
 
         btn_power_off.setOnClickListener(new View.OnClickListener() {
             @Override
