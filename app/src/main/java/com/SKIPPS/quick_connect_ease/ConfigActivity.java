@@ -2,6 +2,7 @@ package com.SKIPPS.quick_connect_ease;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -34,7 +35,9 @@ public class ConfigActivity extends AppCompatActivity {
         btn_adv_settings.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //ye feature dena hai to de warna jada nahi 6 lines fokat ki chud jayegi
+                Intent i=new Intent(ConfigActivity.this,AdvSettingsActivity.class);
+                startActivity(i);
+                finish();
             }
         });
     }

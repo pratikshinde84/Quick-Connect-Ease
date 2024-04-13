@@ -42,7 +42,7 @@ public class Download_File_Fragment extends Fragment {
         lv_recently_downloaded=root.findViewById(R.id.downloaded_file_listview);
         listView = root.findViewById(R.id.download_listview);
         adapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_list_item_1, items);
-        arrayAdapter=new ArrayAdapter<>(requireContext(),android.R.layout.simple_list_item_1,items);
+        arrayAdapter=new ArrayAdapter<>(requireContext(),android.R.layout.simple_list_item_1,item);
         listView.setAdapter(adapter);
         lv_recently_downloaded.setAdapter(arrayAdapter);
         return root;

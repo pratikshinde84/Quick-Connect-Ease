@@ -12,12 +12,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="28dp"
         android:layout_marginEnd="8dp"
         android:textAlignment="center"
+        android:text="Selected File"
+        android:fontFamily="@font/roboto"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ListView
+        android:id="@+id/http_listview"
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:layout_height="300dp"
+        android:layout_marginTop="-100dp" />
+
 </FrameLayout>
