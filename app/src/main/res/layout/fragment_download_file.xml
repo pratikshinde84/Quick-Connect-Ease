@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.Download_File.Download_File_Fragment"
     android:background="@drawable/background"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".ui.Download_File.Download_File_Fragment">
 
     <TextView
         android:layout_width="match_parent"
@@ -15,27 +15,35 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/poppins"
+        android:text="Server To Local Download"
         android:textAlignment="center"
-        android:textSize="24sp"
-        android:text="Server To Local Device" />
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/text_path_download"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="10dp"
+        android:text="/home/piyush/"
         android:textAlignment="center"
-        android:textSize="20sp"
-        android:text="/home/piyush/" />
+        android:textSize="20sp" />
 
-        <ListView
-            android:id="@+id/download_listview"
-            android:layout_width="300dp"
-            android:layout_gravity="center"
-            android:layout_height="300dp"
-            android:layout_marginTop="30dp" />
+    <ImageButton
+        android:id="@+id/btn_previous"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/baseline_arrow_back_24" />
+
+    <ListView
+        android:id="@+id/download_listview"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -44,16 +52,24 @@
         android:layout_marginTop="28dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/madimi"
+        android:text="Download List:"
         android:textAlignment="center"
         android:textSize="24sp"
-        android:text="Recently Downloaded"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
-    <ListView
-        android:id="@+id/downloaded_file_listview"
+    <TextView
+        android:id="@+id/tv_recent"
         android:layout_width="300dp"
-        android:layout_gravity="center"
         android:layout_height="50dp"
-        android:layout_marginTop="30dp"/>
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp" />
+
+    <ImageView
+        android:id="@+id/iv_img_download"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:src="@drawable/baseline_hourglass_empty_24" />
+
 
 </LinearLayout>

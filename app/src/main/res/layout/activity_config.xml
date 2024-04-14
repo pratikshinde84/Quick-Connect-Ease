@@ -112,12 +112,12 @@
             android:textColor="@color/black"/>
 
         <Button
-            android:id="@+id/btn_fetch"
+            android:id="@+id/btn_save"
             android:layout_marginTop="10dp"
             android:layout_width="160dp"
             android:layout_gravity="center"
             android:layout_height="wrap_content"
-            android:text="Fetch"
+            android:text="Save"
             android:backgroundTint="@color/black"
             android:textColor="@color/white"/>
 

@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.Upload_File.Upload_File_Fragment"
     android:background="@drawable/background"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".ui.Upload_File.Upload_File_Fragment">
 
     <TextView
         android:layout_width="match_parent"
@@ -15,9 +15,9 @@
         android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/poppins"
+        android:text="Local To Server Upload"
         android:textAlignment="center"
-        android:textSize="24sp"
-        android:text="Local Device To Server" />
+        android:textSize="24sp" />
 
     <TextView
         android:layout_width="match_parent"
@@ -26,29 +26,49 @@
         android:layout_marginTop="38dp"
         android:layout_marginEnd="8dp"
         android:fontFamily="@font/madimi"
+        android:text="Selected file:"
         android:textAlignment="center"
-        android:textStyle="bold"
         android:textSize="24sp"
-        android:text="Selectedd file "/>
+        android:textStyle="bold" />
 
     <ListView
         android:id="@+id/upload_listview"
         android:layout_width="300dp"
-        android:layout_gravity="center"
         android:layout_height="50dp"
-        android:layout_marginTop="30dp"/>
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp" />
+
+    <ImageView
+        android:id="@+id/iv_img"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/baseline_hourglass_empty_24" />
+
+    <Button
+        android:id="@+id/btn_select_file"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="@color/black"
+        android:text="Select File"
+        android:textColor="@color/white" />
 
     <Button
         android:id="@+id/btn_upload"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="40dp"
-        android:text="Upload"
-        android:backgroundTint="@color/black"
-        android:textColor="@color/white"
-        android:layout_marginBottom="5dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="20dp"
         android:layout_marginRight="30dp"
-        />
+        android:layout_marginBottom="5dp"
+        android:backgroundTint="@color/black"
+        android:text="Upload"
+        android:textColor="@color/white" />
+
 
 </LinearLayout>

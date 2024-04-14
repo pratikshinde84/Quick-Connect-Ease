@@ -1,19 +1,29 @@
 package com.example.secureserver.ui.Power_Management;
+
 import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.SKIPPS.quick_connect_ease.ConfigActivity;
+import com.SKIPPS.utils.power.SleepTask;
+import com.SKIPPS.utils.power.WOLTask;
+import com.SKIPPS.utils.shared_data.SharedPreferenceManager;
 import com.example.secureserver.R;
+
 
 public class Power_Mgmt_Fragment extends Fragment {
 
     private Button btn_power_off;
     private Button btn_power_on;
+    private Button btn_auto_sleep;
     TextView tv_con;
 
     public static Power_Mgmt_Fragment newInstance() {
@@ -28,19 +38,33 @@ public class Power_Mgmt_Fragment extends Fragment {
 
         btn_power_off = root.findViewById(R.id.btn_power_off);
         btn_power_on = root.findViewById(R.id.btn_power_on);
-        tv_con=root.findViewById(R.id.tv_con);
+        btn_auto_sleep = root.findViewById(R.id.btn_auto_sleep);
+        tv_con = root.findViewById(R.id.tv_con);
+        String hostname = SharedPreferenceManager.readString(getContext(), "ip_address", "");
+        String username = SharedPreferenceManager.readString(getContext(), "username", "");
+
+        tv_con.setText("Connected to:\n" + username + "@" + hostname);
 
         btn_power_off.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //piyush bhai power off ka code
+                new SleepTask(Power_Mgmt_Fragment.this.getContext()).execute();
             }
         });
 
         btn_power_on.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // piyush bhai power on ka code
+                String macAddress = SharedPreferenceManager.readString(getContext(), "mac_address", "");
+                String broadcastAddress = SharedPreferenceManager.readString(getContext(), "ip_address", "");
+                WOLTask task = new WOLTask(Power_Mgmt_Fragment.this.getContext());
+                task.execute(macAddress, broadcastAddress);
+            }
+        });
+        btn_auto_sleep.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(root.getContext(), "Server will auto sleep after work", Toast.LENGTH_SHORT).show();
             }
         });
 

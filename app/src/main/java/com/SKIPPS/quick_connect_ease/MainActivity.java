@@ -8,6 +8,8 @@ import android.view.MenuItem;
 import android.view.Menu;
 import android.widget.Toast;
 
+import com.SKIPPS.utils.ssh.SSHInitTask;
+import com.SKIPPS.utils.ssh.SSHManager;
 import com.example.secureserver.R;
 import com.google.android.material.navigation.NavigationView;
 
@@ -64,7 +66,10 @@ public class MainActivity extends AppCompatActivity {
             drawer.closeDrawer(GravityCompat.START);
             return true;
         });
+
     }
+
+
 
 
     @Override
@@ -112,22 +117,20 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        if (doubleTap)
-        {
+        if (doubleTap) {
             new AlertDialog.Builder(this)
                     .setTitle("Exit")
                     .setMessage("Are you sure you want to exit?")
                     .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
+                            SSHManager.disconnect();
                             MainActivity.super.onBackPressed();
                         }
                     })
                     .setNegativeButton(android.R.string.no, null)
                     .setIcon(android.R.drawable.ic_dialog_alert)
                     .show();
-        }
-        else
-        {
+        } else {
             Toast.makeText(MainActivity.this, "Press again to exit app", Toast.LENGTH_SHORT).show();
             doubleTap = true;
             new Handler().postDelayed(new Runnable() {
