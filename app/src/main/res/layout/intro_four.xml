@@ -2,22 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:background="@drawable/ic_launcher_background"
-            android:layout_gravity="center"/>
-
-    </LinearLayout>
+    android:orientation="vertical"
+    android:background="@drawable/background">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,28 +14,31 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello"
-            android:textColor="@color/sky"
-            android:gravity="center"
-            android:textSize="25dp"
-            android:textStyle="bold"
-            />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Pratik shinde here"
-            android:textColor="@color/sky"
-            android:gravity="center"
-            android:textSize="25dp"
+            android:text="If you see message 'Auto Config successful', then everything is ok you can start using features."
+            android:textColor="@color/black"
+            android:gravity="start|top"
+            android:textSize="30dp"
             android:textStyle="bold"
             android:layout_marginEnd="25sp"
             android:layout_marginStart="25dp"
             android:layout_marginTop="15dp"
+            android:fontFamily="@font/madimi"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="If you see message 'Auto Config failed',then cross check values again and restart the app."
+            android:textColor="@color/black"
+            android:gravity="start|top"
+            android:textSize="30dp"
+            android:textStyle="bold"
+            android:layout_marginEnd="25sp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/madimi"
             />
 
 
     </LinearLayout>
 
 </LinearLayout>
-

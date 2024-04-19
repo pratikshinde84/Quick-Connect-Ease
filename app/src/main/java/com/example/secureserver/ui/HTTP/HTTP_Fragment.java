@@ -26,7 +26,7 @@ public class HTTP_Fragment extends Fragment {
     private ImageButton btnPrevious;
     private ArrayAdapter<String> adapter;
     private TextView textView;
-    private String currentDirectory = "/var/www/html/"; // Update this with your directory path
+    private String currentDirectory = "/var/www/html/";
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -35,7 +35,6 @@ public class HTTP_Fragment extends Fragment {
         textView = root.findViewById(R.id.text_http_fragment);
         btnPrevious = root.findViewById(R.id.btn_previous_http);
 
-        // Execute ListTask to fetch files from the specified directory
         ListTask listTask = new ListTask(requireContext(), lv_http);
         listTask.execute(currentDirectory);
 

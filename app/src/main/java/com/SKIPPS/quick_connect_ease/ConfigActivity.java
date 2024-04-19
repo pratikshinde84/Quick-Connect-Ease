@@ -10,10 +10,11 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.SKIPPS.utils.shared_data.SharedPreferenceManager;
+import com.SKIPPS.utils.ssh.SSHInitTask;
 import com.example.secureserver.R;
 
 public class ConfigActivity extends AppCompatActivity {
-    EditText et_ip, et_mac, et_port, et_username, et_password;
+    EditText et_ip, et_mac, et_port, et_username, et_password, et_path;
     Button btn_save, btn_adv_settings;
 
     @Override
@@ -25,20 +26,22 @@ public class ConfigActivity extends AppCompatActivity {
         et_port = findViewById(R.id.et_port_no);
         et_username = findViewById(R.id.et_username);
         et_password = findViewById(R.id.et_password);
+        et_path = findViewById(R.id.et_path);
         btn_save = findViewById(R.id.btn_save);
         btn_adv_settings = findViewById(R.id.btn_adv_settings);
 
         String ip = SharedPreferenceManager.readString(ConfigActivity.this, "ip_address", "");
         String mac = SharedPreferenceManager.readString(ConfigActivity.this, "mac_address", "");
-        String port = SharedPreferenceManager.readString(ConfigActivity.this, "port", "");
+        String port = SharedPreferenceManager.readString(ConfigActivity.this, "port", "22");
         String username = SharedPreferenceManager.readString(ConfigActivity.this, "username", "");
         String password = SharedPreferenceManager.readString(ConfigActivity.this, "password", "");
-
+        String path = SharedPreferenceManager.readString(ConfigActivity.this, "path", "/home/");
         et_ip.setText(ip);
         et_mac.setText(mac);
         et_port.setText(port);
         et_username.setText(username);
         et_password.setText(password);
+        et_path.setText(path);
 
         btn_save.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,14 +51,16 @@ public class ConfigActivity extends AppCompatActivity {
                 String port = et_port.getText().toString();
                 String username = et_username.getText().toString();
                 String password = et_password.getText().toString();
+                String path = et_path.getText().toString();
 
                 SharedPreferenceManager.writeString(ConfigActivity.this, "ip_address", ip);
                 SharedPreferenceManager.writeString(ConfigActivity.this, "mac_address", mac);
                 SharedPreferenceManager.writeString(ConfigActivity.this, "port", port);
                 SharedPreferenceManager.writeString(ConfigActivity.this, "username", username);
                 SharedPreferenceManager.writeString(ConfigActivity.this, "password", password);
-
+                SharedPreferenceManager.writeString(ConfigActivity.this, "path", path);
                 Toast.makeText(ConfigActivity.this, "Settings saved successfully", Toast.LENGTH_SHORT).show();
+                new SSHInitTask(ConfigActivity.this).execute();
             }
         });
 

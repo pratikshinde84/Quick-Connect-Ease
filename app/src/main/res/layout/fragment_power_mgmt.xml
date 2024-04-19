@@ -45,7 +45,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="150dp"
         android:backgroundTint="@color/black"
-        android:text="Auto sleep after work"
+        android:text="Auto sleep"
         android:textColor="@color/white" />
 
 </LinearLayout>

@@ -2,22 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     android:orientation="vertical">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:background="@drawable/ic_launcher_background"
-            android:layout_gravity="center"/>
-
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,25 +14,70 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello"
-            android:textColor="@color/sky"
+            android:fontFamily="@font/poppins"
             android:gravity="center"
-            android:textSize="25dp"
-            android:textStyle="bold"
-            />
+            android:text="Welcome to Quick Connect Ease "
+            android:textColor="@color/black"
+            android:textSize="32dp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center" />
+        <!--        android:src="@drawable/logofor"-->
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pratik shinde here"
-            android:textColor="@color/sky"
-            android:gravity="center"
-            android:textSize="25dp"
-            android:textStyle="bold"
-            android:layout_marginEnd="25sp"
             android:layout_marginStart="25dp"
             android:layout_marginTop="15dp"
-            />
+            android:layout_marginEnd="25sp"
+            android:fontFamily="@font/poppins"
+            android:gravity="start|top"
+            android:text="Follow the steps to use the app."
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="25sp"
+            android:fontFamily="@font/madimi"
+            android:gravity="start|top"
+            android:text="1) Install Ubuntu On Your PC(server),set Username and Password."
+            android:textColor="@color/black"
+            android:textSize="23dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="25sp"
+            android:fontFamily="@font/madimi"
+            android:gravity="start|top"
+            android:text="2) Connect your internet cable to your PC(server)."
+            android:textColor="@color/black"
+            android:textSize="23dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="25sp"
+            android:fontFamily="@font/madimi"
+            android:gravity="start|top"
+            android:text="3) Open terminal on PC and run command - 'sudo apt install openssh-server'"
+            android:textColor="@color/black"
+            android:textSize="23dp"
+            android:textStyle="bold" />
 
 
     </LinearLayout>

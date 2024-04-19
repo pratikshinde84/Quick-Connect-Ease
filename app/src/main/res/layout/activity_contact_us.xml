@@ -7,4 +7,46 @@
     tools:context="com.SKIPPS.quick_connect_ease.Contact_us_Activity"
     android:background="@drawable/background">
 
+    <TextView
+        android:id="@+id/textview_contact_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contact Us"
+        android:textSize="34sp"
+        android:textColor="#000000"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textview_contact_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="We appreciate your feedback! If you have any questions or suggestions, please feel free to reach out to us at:"
+        android:textColor="#000000"
+        android:textSize="26sp"
+        android:paddingStart="16dp"
+        android:paddingTop="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_contact_title" />
+
+    <TextView
+        android:id="@+id/textview_contact_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="qce.skipps@gmail.com"
+        android:textColor="#000000"
+        android:textSize="26sp"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingBottom="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textview_contact_content" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

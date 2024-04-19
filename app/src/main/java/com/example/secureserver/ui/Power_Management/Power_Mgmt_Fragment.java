@@ -24,6 +24,7 @@ public class Power_Mgmt_Fragment extends Fragment {
     private Button btn_power_off;
     private Button btn_power_on;
     private Button btn_auto_sleep;
+    private static boolean isAutoSleep = false;
     TextView tv_con;
 
     public static Power_Mgmt_Fragment newInstance() {
@@ -43,8 +44,11 @@ public class Power_Mgmt_Fragment extends Fragment {
         String hostname = SharedPreferenceManager.readString(getContext(), "ip_address", "");
         String username = SharedPreferenceManager.readString(getContext(), "username", "");
 
-        tv_con.setText("Connected to:\n" + username + "@" + hostname);
-
+        if (hostname.isEmpty() || username.isEmpty()) {
+            tv_con.setText("Configuration required");
+        } else {
+            tv_con.setText("Server at:\n" + username + "@" + hostname);
+        }
         btn_power_off.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,10 +68,20 @@ public class Power_Mgmt_Fragment extends Fragment {
         btn_auto_sleep.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(root.getContext(), "Server will auto sleep after work", Toast.LENGTH_SHORT).show();
+                isAutoSleep = !isAutoSleep;
+                if (isAutoSleep) {
+                    Toast.makeText(root.getContext(), "Server will auto sleep after work", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(root.getContext(), "Server will not sleep after work", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
 
         return root;
+    }
+
+    public static boolean getAutoSleep() {
+        return isAutoSleep;
     }
 }

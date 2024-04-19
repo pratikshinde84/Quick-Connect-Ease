@@ -2,22 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/background">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <ImageView
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:background="@drawable/ic_launcher_background"
-            android:layout_gravity="center"/>
-
-    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -28,25 +15,95 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Hello"
-            android:textColor="@color/sky"
-            android:gravity="center"
-            android:textSize="25dp"
+            android:text="Enter following values"
+            android:textColor="@color/black"
+            android:gravity="start|top"
+            android:textSize="30dp"
             android:textStyle="bold"
+            android:layout_marginEnd="25sp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/poppins"
             />
-
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Pratik shinde here"
-            android:textColor="@color/sky"
+            android:text="1) IP of server"
+            android:textColor="@color/black"
+            android:gravity="start|top"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:layout_marginEnd="25sp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/poppins"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="2) MAC of server"
+            android:textColor="@color/black"
+            android:gravity="start|top"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:layout_marginEnd="25sp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/poppins"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3) Port number of server"
+            android:textColor="@color/black"
+            android:gravity="start|top"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:layout_marginEnd="25sp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/poppins"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4) Username of ubuntu server"
+            android:textColor="@color/black"
+            android:gravity="start|top"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:layout_marginEnd="25sp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/poppins"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="5) Password of ubuntu server"
+            android:textColor="@color/black"
+            android:gravity="start|top"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:layout_marginEnd="25sp"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="15dp"
+            android:fontFamily="@font/poppins"
+            />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Click on save"
+            android:textColor="@color/black"
             android:gravity="center"
             android:textSize="25dp"
             android:textStyle="bold"
             android:layout_marginEnd="25sp"
             android:layout_marginStart="25dp"
             android:layout_marginTop="15dp"
+            android:fontFamily="@font/poppins"
             />
+
 
 
     </LinearLayout>

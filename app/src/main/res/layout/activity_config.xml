@@ -111,6 +111,25 @@
             android:layout_marginBottom="16dp"
             android:textColor="@color/black"/>
 
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:text="Enter Upload path"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/et_path"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:hint="Path"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/black"/>
+
         <Button
             android:id="@+id/btn_save"
             android:layout_marginTop="10dp"

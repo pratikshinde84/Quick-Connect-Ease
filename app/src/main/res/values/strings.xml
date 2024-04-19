@@ -13,4 +13,16 @@
     <string name="menu_slideshow">Slideshow</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about_us_content">Welcome to QuickConnectEase, your gateway to seamless and secure remote access to home server resources.\n
+At QuickConnectEase, our vision is to empower users with the convenience of accessing their files and data
+from anywhere, at any time, while prioritizing security and reliability.\nAs a team of dedicated developers, we embarked on the mission
+to create QuickConnectEase as our Diploma\'s Final Year Project, leveraging our collective expertise in
+software development and networking.\n
+Behind QuickConnectEase is a team of six dynamic individuals:\n
+1) Sushil Bharudkar\n
+2) Ishan Chipate\n
+3) Krishna Choundiye\n
+4) Piyush Holkar\n
+5) Shubham Jadhav\n
+6) Pratik Shinde\n</string>
 </resources>

@@ -8,9 +8,11 @@ import android.view.MenuItem;
 import android.view.Menu;
 import android.widget.Toast;
 
+import com.SKIPPS.utils.power.SleepTask;
 import com.SKIPPS.utils.ssh.SSHInitTask;
 import com.SKIPPS.utils.ssh.SSHManager;
 import com.example.secureserver.R;
+import com.example.secureserver.ui.Power_Management.Power_Mgmt_Fragment;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.appcompat.app.AlertDialog;
@@ -70,8 +72,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
-
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.main, menu);
@@ -123,6 +123,13 @@ public class MainActivity extends AppCompatActivity {
                     .setMessage("Are you sure you want to exit?")
                     .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
                         public void onClick(DialogInterface dialog, int which) {
+                            if (Power_Mgmt_Fragment.getAutoSleep())
+                                new SleepTask(MainActivity.this).execute();
+                            try {
+                                Thread.sleep(1000);
+                            } catch (InterruptedException e) {
+                                throw new RuntimeException(e);
+                            }
                             SSHManager.disconnect();
                             MainActivity.super.onBackPressed();
                         }
