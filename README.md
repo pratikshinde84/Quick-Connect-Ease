@@ -6,8 +6,9 @@ Power management (wake-on-LAN, sleep mode).
 File upload/download.
 Customizable server settings.
 Enhanced data privacy.
+
 How to Access
-Visit QuickConnectEase to download and get started.
+Visit quickconnectease.netlify.app to download and get started.
 
 Compatibility
 Smartphones: Android 5.0 and above.
